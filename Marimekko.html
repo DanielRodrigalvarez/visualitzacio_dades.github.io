@@ -1,0 +1,88 @@
+<div id="anychart-embed-samples-bct-mekko-chart-01" class="anychart-embed anychart-embed-samples-bct-mekko-chart-01">
+<script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-base.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-mekko.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-exports.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<script src="https://cdn.anychart.com/releases/8.13.0/js/anychart-ui.min.js?hcode=a0c21fc77e1449cc86299c5faa067dc4"></script>
+<div id="ac_style_samples-bct-mekko-chart-01" style="display:none;">
+html, body, #container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+</div>
+<script>(function(){
+function ac_add_to_head(el){
+	var head = document.getElementsByTagName('head')[0];
+	head.insertBefore(el,head.firstChild);
+}
+function ac_add_link(url){
+	var el = document.createElement('link');
+	el.rel='stylesheet';el.type='text/css';el.media='all';el.href=url;
+	ac_add_to_head(el);
+}
+function ac_add_style(css){
+	var ac_style = document.createElement('style');
+	if (ac_style.styleSheet) ac_style.styleSheet.cssText = css;
+	else ac_style.appendChild(document.createTextNode(css));
+	ac_add_to_head(ac_style);
+}
+ac_add_link('https://cdn.anychart.com/releases/8.13.0/css/anychart-ui.min.css?hcode=a0c21fc77e1449cc86299c5faa067dc4');
+ac_add_style(document.getElementById("ac_style_samples-bct-mekko-chart-01").innerHTML);
+ac_add_style(".anychart-embed-samples-bct-mekko-chart-01{width:600px;height:450px;}");
+})();</script>
+<div id="container"></div>
+<script>
+anychart.onDocumentReady(function () {
+
+    // create a data set
+    var data = anychart.data.set([
+		["2010", 1120, 2325, 150, 2227, 6700, 17453, 2944, 2297, 2689, 37905],   
+		["2011", 1483, 2708, 39, 1792, 4846, 16319, 2681, 2081, 2912, 34861],
+		["2012", 2000, 3128, 250, 2219, 5036, 15099, 2719, 2002, 2898, 35350],
+		["2014", 2079, 1341, 45, 1305, 4278, 13780, 2328, 1918, 3261, 30335],
+		["2015", 1715, 1338, 200, 1435, 4898, 14287, 2436, 2014, 3331, 31653],
+      ["2017", 802, 1629, 330, 1678, 4817, 15247, 2754, 2167, 3443, 32867],
+      ["2020", 882, 1284, 250, 1808, 5548, 17235, 3259, 2409, 3725, 36400],
+      ["2022", 666, 1872, 300, 2471, 6815, 19727, 4038, 2590, 4351, 42830],
+      ["2023", 803, 1850, 300, 2785, 7069, 21147, 4343, 2892, 4613, 45801]
+    ]);
+
+    // map the data
+    var seriesData_1 = data.mapAs({x: 0, value: 1});
+    var seriesData_2 = data.mapAs({x: 0, value: 2});
+    var seriesData_3 = data.mapAs({x: 0, value: 3});
+    var seriesData_4 = data.mapAs({x: 0, value: 4});
+    var seriesData_5 = data.mapAs({x: 0, value: 5});
+    var seriesData_6 = data.mapAs({x: 0, value: 6});
+    var seriesData_7 = data.mapAs({x: 0, value: 7});
+    var seriesData_8 = data.mapAs({x: 0, value: 8});
+    var seriesData_9 = data.mapAs({x: 0, value: 9});
+    var seriesData_10 = data.mapAs({x: 0, value: 10});
+
+    // create a chart
+    var chart = anychart.mekko();
+
+    // add series and change the orientation
+    var series1 = chart.mekko(seriesData_1).name("Deute públic");
+    var series2 = chart.mekko(seriesData_2).name("Foment i regulació de sectors productius");
+    var series3 = chart.mekko(seriesData_3).name("Fons de contingència");
+    var series4 = chart.mekko(seriesData_4).name("Funcionament de les institucions i administració general");
+    var series5 = chart.mekko(seriesData_5).name("Producció de béns públics de caràcter econòmic");
+    var series6 = chart.mekko(seriesData_6).name("Producció de béns públics de caràcter social");
+    var series7 = chart.mekko(seriesData_7).name("Protecció i promoció social");
+    var series8 = chart.mekko(seriesData_8).name("Serveis públics generals");
+    var series9 = chart.mekko(seriesData_9).name("Suport financer als ens locals");
+    var series10 = chart.mekko(seriesData_10).name("Sense assignar");
+    
+    // set the chart title
+    chart.title("Distribució del pressupost per àrea (2010-2023)\n Quina àrea consumeix més pressupost històricament?");
+
+    // set the container id
+    chart.container("container");
+
+    // initiate drawing the chart
+    chart.draw();
+});
+</script>
+</div>
